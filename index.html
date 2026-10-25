@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalkulator snu — o której iść spać</title>
+<meta name="description" content="Cykle snu 90 minut: wpisz o której musisz wstać, a powiemy o której iść spać (albo odwrotnie). Obudzisz się wypoczęty.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😴</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <!-- TODO: link do portfolio, gdy powstanie -->
+  <h1>Kalkulator snu</h1>
+  <p>Budź się między cyklami, nie w środku.</p>
+  <section class="card">
+    <label>Tryb <select id="mode"><option value="wake">muszę wstać o…</option><option value="bed">idę spać o…</option></select></label>
+    <label>Godzina <input id="time" type="time" value="07:00"></label>
+  </section>
+  <section class="card">
+    <h2>Wynik</h2>
+    <div id="out" class="big">—</div>
+    <p id="detail" class="hint"></p>
+  </section>
+  <section class="card">
+    <h2>Jak to działa</h2>
+    <p>Sen układa się w cykle ok. 90 minut — najłatwiej obudzić się na granicy cyklu, najgorzej w fazie głębokiej. Do wyniku dodajemy 15 minut na zaśnięcie. Dlatego np. wstając o 7:00 najlepiej położyć się o 23:45 (5 cykli) albo o 1:15 (4 cykle), a nie „na okrągłe” 8 godzin, które urywają cykl w połowie.</p>
+    <p><strong>Przykład:</strong> pobudka 6:30 → połóż się o 22:45 (5 cykli) lub o 0:15 (4 cykle). Idziesz spać o 23:00? Nastaw budzik na 6:15 albo 7:45. Dorośli potrzebują zwykle 5–6 pełnych cykli.</p>
+  </section>
+  <div id="ads-slot" hidden></div>
+  <footer><a href="privacy.html">Prywatność</a> · <a href="kontakt.html">Kontakt</a></footer>
+</main>
+<script src="app.js"></script>
+<script src="ads.js"></script>
+</body>
+</html>
